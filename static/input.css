@@ -1,0 +1,103 @@
+@config "../tailwind.config.js";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@layer base {
+  h2 {
+    @apply text-xl font-bold underline;
+  }
+}
+
+@layer components {
+  .input-container {
+    @apply flex justify-center my-5;
+  }
+  
+  .input-wrap {
+    @apply basis-full md:basis-1/2 xl:basis-1/3 flex flex-col gap-3 justify-center border border-solid shadow-md rounded-md px-5 py-5;
+  }
+  
+  .input-label {
+    @apply block text-sm font-bold pb-2 text-gray-900;
+  }
+
+  .input-content {
+    @apply block w-full rounded-md border-0 px-2 py-1.5 bg-transparent text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus-visible:ring-2 focus:ring-inset focus-visible:ring-indigo-600 sm:text-sm sm:leading-6 outline-none;
+  }
+
+  .btn-indigo {
+    @apply rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ;
+  }
+
+  .card-list {
+    @apply m-auto grid grid-flow-row grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 mb-5;
+  }
+
+  .card-container {
+    @apply text-center border border-solid shadow-md rounded-md grid grid-cols-1 justify-between divide-y;
+  }
+
+  .card-content-warp {
+    @apply relative px-3 py-5 flex flex-col justify-between;
+    min-height: 10rem;
+  }
+
+  .card-btn-warp {
+    @apply grid grid-cols-2 divide-x place-content-end;
+  }
+
+  .card-title {
+    @apply text-lg font-semibold text-gray-900;
+  }
+
+  .card-message {
+    @apply text-sm font-normal text-gray-600 overflow-y-auto max-h-14;
+  }
+
+  .card-time {
+    @apply text-sm font-light text-gray-300 place-content-end;
+  }
+
+  .card-message::-webkit-scrollbar {
+    @apply w-1;
+  }
+  
+  .card-message::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 rounded-sm;
+  }
+
+  .card-message::-webkit-scrollbar-track {
+    @apply bg-gray-200 rounded-sm;
+  }
+
+  .copy-icon {
+    @apply absolute bottom-3 right-3 text-gray-400 hover:cursor-pointer hover:text-indigo-600;
+  }
+
+  .pin-icon {
+    @apply absolute top-3 left-3 hover:cursor-pointer hover:text-indigo-600;
+  }
+
+  .pin-icon.pin-0 {
+    @apply text-gray-400;
+  }
+
+  .pin-icon.pin-1 {
+    @apply text-indigo-600;
+  }
+
+  .card-btn {
+    @apply py-2 font-medium hover:bg-gray-200 hover:cursor-pointer;
+  }
+
+  .card-btn .left {
+    @apply rounded-bl-md;
+  }
+
+  .card-btn .right {
+    @apply rounded-br-md;
+  }
+}
